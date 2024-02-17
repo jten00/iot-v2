@@ -1,0 +1,5 @@
+### GET data
+GET https://httpbin.org/get
+
+### GET send query parameter (data)
+GET https://httpbin.org/get?value=250

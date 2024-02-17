@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "anon",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -152.45,
+      "left": -68.55,
+      "rotate": 90,
+      "attrs": { "cyw43": "1" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -245.6,
+      "left": 69.42,
+      "attrs": { "delayTime": "1", "inhibitTime": "0" }
+    }
+  ],
+  "connections": [
+    [ "pico:3V3", "pir1:VCC", "green", [ "v19.51", "h86.4" ] ],
+    [ "pico:GND.8", "pir1:GND", "black", [ "v19.51", "h86.4" ] ],
+    [ "pico:GP27", "pir1:OUT", "red", [ "v38.71", "h134.4" ] ]
+  ],
+  "serialMonitor": { "display": "terminal" },
+  "dependencies": {}
+}

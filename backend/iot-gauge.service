@@ -1,0 +1,13 @@
+[Unit]
+Description=iot-gauge
+After=network.target
+
+[Service]
+EnvironmentFile=/root/projects/iot-gauge/.env
+Type=simple
+User=root
+ExecStart=/usr/bin/node /root/projects/iot-gauge/main.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+@api_url={{$dotenv API_URL}}
+
+### GET status
+GET {{api_url}}/status
+
+# Server converts value 0-65536 to 0-100 scale
+### GET update?value=20
+GET {{api_url}}/update?value=60
