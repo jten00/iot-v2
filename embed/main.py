@@ -27,7 +27,6 @@ def sendData(value):
         DATA_ENDPOINT = "http://20.238.121.237:80/api/update"
         response = requests.get(f"{DATA_ENDPOINT}?value={value}")
         print("Response status code:", response.status_code)
-        # Reset count only after successful transmission
         count = 0
     except Exception as error:
         print("Request failed:", error)
